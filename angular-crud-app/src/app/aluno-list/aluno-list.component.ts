@@ -1,3 +1,4 @@
+// aluno-list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AlunoService } from '../aluno.service';
 
@@ -16,14 +17,24 @@ export class AlunoListComponent implements OnInit {
   }
 
   getAlunos() {
-    this.alunoService.getAlunos().subscribe((data: any) => {
-      this.alunos = data;
-    });
+    this.alunoService.getAlunos().subscribe(
+      (data: any) => {
+        this.alunos = data;
+      },
+      (error: any) => {
+        console.error('Erro ao obter alunos:', error);
+      }
+    );
   }
 
   deleteAluno(id: number) {
-    this.alunoService.deleteAluno(id).subscribe(() => {
-      this.getAlunos();
-    });
+    this.alunoService.deleteAluno(id).subscribe(
+      () => {
+        this.getAlunos();
+      },
+      (error: any) => {
+        console.error('Erro ao excluir aluno:', error);
+      }
+    );
   }
 }

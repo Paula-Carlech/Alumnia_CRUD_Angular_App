@@ -1,3 +1,4 @@
+// aluno.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -6,13 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AlunoService {
-  private apiUrl = 'http://localhost:4200/';
-  private alunoUrl = `${this.apiUrl}/alunos`;
+  private apiUrl = 'assets/alunos.json';
+  private alunoUrl = 'http://localhost:4200/alunos';
 
   constructor(private http: HttpClient) {}
 
   getAlunos(): Observable<any> {
-    return this.http.get(this.alunoUrl);
+    return this.http.get(this.apiUrl);
   }
 
   getAluno(id: number): Observable<any> {
