@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AlunoCreateComponent } from './aluno-create.component';
 
 describe('AlunoCreateComponent', () => {
@@ -8,7 +7,7 @@ describe('AlunoCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AlunoCreateComponent]
+      declarations: [AlunoCreateComponent]
     })
     .compileComponents();
     
