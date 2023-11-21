@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { AlunoService } from '../aluno.service';
 
 @Component({
   selector: 'app-aluno-create',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './aluno-create.component.html',
-  styleUrl: './aluno-create.component.css'
+  styleUrls: ['./aluno-create.component.css']
 })
 export class AlunoCreateComponent {
+  novoAluno = {
+    nome: '',
+    email: '',
+    numeroMatricula: ''
+  };
 
+  constructor(private alunoService: AlunoService, private router: Router) { }
+
+  createAluno() {
+    this.alunoService.addAluno(this.novoAluno).subscribe(() => {
+      this.router.navigate(['/aluno-create']);
+    });
+  }
 }

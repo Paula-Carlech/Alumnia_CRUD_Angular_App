@@ -1,13 +1,29 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AlunoService } from '../aluno.service';
 
 @Component({
   selector: 'app-aluno-details',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './aluno-details.component.html',
-  styleUrl: './aluno-details.component.css'
+  styleUrls: ['./aluno-details.component.css']
 })
-export class AlunoDetailsComponent {
+export class AlunoDetailsComponent implements OnInit {
+  alunoDetalhes: any = {};
 
+  constructor(
+    private alunoService: AlunoService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    if (this.route.snapshot.paramMap.has('id')) {
+      const alunoId = +this.route.snapshot.paramMap.get('id');
+
+      this.alunoService.getAluno(alunoId).subscribe((data: any) => {
+        this.alunoDetalhes = data;
+      });
+    } else {
+      console.error('ID do aluno não encontrado na rota.');
+    }
+  }
 }
