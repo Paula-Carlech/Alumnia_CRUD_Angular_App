@@ -1,22 +1,37 @@
-// app-routing.module.ts
-
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlunoListComponent } from './aluno-list/aluno-list.component';
-import { AlunoCreateComponent } from './aluno-create/aluno-create.component';
-import { AlunoEditComponent } from './aluno-edit/aluno-edit.component';
-import { AlunoDetailsComponent } from './aluno-details/aluno-details.component';
+import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/alunos', pathMatch: 'full' },
-  { path: 'alunos', component: AlunoListComponent },
-  { path: 'aluno-create', component: AlunoCreateComponent },
-  { path: 'aluno-edit/:id', component: AlunoEditComponent },
-  { path: 'aluno-details/:id', component: AlunoDetailsComponent },
+  {
+    path: '',
+    redirectTo: 'listarPensamento',
+    pathMatch: 'full'
+  },
+  {
+    path: 'criarPensamento',
+    component: CriarPensamentoComponent
+  },
+  {
+    path: 'listarPensamento',
+    component: ListarPensamentoComponent
+  },
+  {
+    path: 'pensamentos/excluirPensamento/:id',
+    component: ExcluirPensamentoComponent
+  },
+  {
+    path: 'pensamentos/editarPensamento/:id',
+    component: EditarPensamentoComponent
+  }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
