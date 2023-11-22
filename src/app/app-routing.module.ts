@@ -1,33 +1,32 @@
-import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
+import { CriarAlunoComponent } from './componentes/pensamentos/criar-aluno/criar-aluno.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
-import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
-import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
+import { ListarAlunoComponent } from './componentes/pensamentos/listar-aluno/listar-aluno.component';
+import { ExcluirAlunoComponent } from './componentes/pensamentos/excluir-aluno/excluir-aluno.component';
+import { EditarAlunoComponent } from './componentes/pensamentos/editar-aluno/editar-aluno.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'listarPensamento',
+    redirectTo: 'listarAluno',
     pathMatch: 'full'
   },
   {
-    path: 'criarPensamento',
-    component: CriarPensamentoComponent
+    path: 'criarAluno',
+    component: CriarAlunoComponent
   },
   {
-    path: 'listarPensamento',
-    component: ListarPensamentoComponent
+    path: 'listarAluno',
+    component: ListarAlunoComponent
   },
   {
-    path: 'pensamentos/excluirPensamento/:id',
-    component: ExcluirPensamentoComponent
+    path: 'pensamentos/excluirAluno/:id',
+    component: ExcluirAlunoComponent
   },
   {
-    path: 'pensamentos/editarPensamento/:id',
-    component: EditarPensamentoComponent
+    path: 'pensamentos/editarAluno/:id',
+    component: EditarAlunoComponent
   }
-
 ];
 
 @NgModule({

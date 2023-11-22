@@ -1,6 +1,6 @@
 .acoes {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .botao-excluir {
@@ -17,18 +17,18 @@
   margin-top: 10px;
 }
 
-.pensamento {
+.aluno {
   background-color: #F8F9FE;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-.pensamento .conteudo {
+.aluno .conteudo {
   margin: 1rem auto;
   word-wrap: break-word;
 }
 
-.pensamento .autoria {
+.aluno .autoria {
   word-wrap: break-word;
 }
 
@@ -44,21 +44,22 @@
   box-shadow: 8px 8px 0px #84EEC1;
 }
 
-.pensamento-g {
+.aluno-g {
   width: 556px;
 }
 
-.pensamento-p {
+.aluno-p {
   width: 262px;
 }
 
 @media screen and (max-width: 768px) {
-  .pensamento-g {
+  .aluno-g {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 426px) {
-  .pensamento-p {
+  .aluno-p {
     width: 100%;
   }
 }

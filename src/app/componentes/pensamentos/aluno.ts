@@ -1,4 +1,4 @@
-export interface Pensamento {
+export interface Aluno {
   id?: number
   conteudo: string
   autoria: string

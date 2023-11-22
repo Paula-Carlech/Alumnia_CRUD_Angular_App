@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">Meu Mural</h2>
+    <button routerLink="/aluno-create" class="botao">Adicionar aluno</button>
+  </header>
+  <div class="mural" *ngIf="listaAlunos && listaAlunos.length > 0; else semAluno">
+    <div *ngFor="let aluno of listaAlunos">
+      <app-aluno [aluno]="aluno"></app-aluno>
+    </div>
+  </div>
+</section>
+<ng-template #semAluno>
+  <div class="ff-inter sem-alunos">
+    <p>Ainda não há alunos cadastrados!</p>
+  </div>
+</ng-template>

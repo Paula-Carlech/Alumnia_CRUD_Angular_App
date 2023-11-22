@@ -7,29 +7,26 @@
   margin: 5px;
 }
 
-.editar-pensamentos {
-  padding: 2rem 0;
+.editar-alunos {
+  padding: 2rem 0; /* Alterado o nome da classe */
 }
 
-.editar-pensamentos form {
+.editar-alunos form {
   background: #C4EDFF;
-
   border: none;
   border-radius: 20px;
-
   display: flex;
   flex-direction: column;
-
   padding: 2rem;
 }
 
-.editar-pensamentos form label {
+.editar-alunos form label {
   color: #154580;
   font-weight: bold;
   margin: 0 0 1rem;
 }
 
-.editar-pensamentos form .input {
+.editar-alunos form .input {
   border: none;
   height: 40px;
   padding: 1rem 2rem;
@@ -37,8 +34,7 @@
   margin: 0.5rem 0 2rem;
 }
 
-
-.editar-pensamentos form .textarea {
+.editar-alunos form .textarea {
   border: none;
   padding: 1rem 2rem;
   border-radius: 20px;

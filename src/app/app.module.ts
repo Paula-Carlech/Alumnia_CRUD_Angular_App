@@ -7,22 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
-import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
-import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
-import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
-import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
-import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
+import { CriarAlunoComponent } from './componentes/pensamentos/criar-aluno/criar-aluno.component';
+import { ListarAlunoComponent } from './componentes/pensamentos/listar-aluno/listar-aluno.component';
+import { AlunoComponent } from './componentes/pensamentos/aluno/aluno.component';
+import { ExcluirAlunoComponent } from './componentes/pensamentos/excluir-aluno/excluir-aluno.component';
+import { EditarAlunoComponent } from './componentes/pensamentos/editar-aluno/editar-aluno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
     RodapeComponent,
-    CriarPensamentoComponent,
-    ListarPensamentoComponent,
-    PensamentoComponent,
-    ExcluirPensamentoComponent,
-    EditarPensamentoComponent
+    CriarAlunoComponent,
+    ListarAlunoComponent,
+    AlunoComponent,
+    ExcluirAlunoComponent,
+    EditarAlunoComponent
   ],
   imports: [
     BrowserModule,
