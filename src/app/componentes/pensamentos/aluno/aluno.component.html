@@ -2,6 +2,8 @@
   <img src="/assets/imagens/{{ aluno.modelo }}.png" alt="Aspas coloridas">
   <p class="conteudo">{{ aluno.conteudo }}</p>
   <p class="autoria"><b>{{ aluno.autoria }}</b></p>
+  <br>
+  <p class="autoria"><b>Matrícula: {{ aluno.id }}</b></p>
   <div class="acoes">
     <button class="botao-editar">
       <img src="/assets/imagens/icone-editar.png" routerLink="/pensamentos/editarAluno/{{aluno.id}}" alt="Ícone de editar">
