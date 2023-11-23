@@ -1,27 +1,34 @@
-# Memoteca
+# Alumnia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+Bem-vindo ao **Alumnia**! Este é um sistema para gerenciar alunos.
 
-## Development server
+## Instruções de Uso
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Siga estas etapas para configurar e executar o projeto localmente:
 
-## Code scaffolding
+### 1. Instale o json-server e o Angular (caso ainda não tenha)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install -g json-server @angular/cli
+```
 
-## Build
+### 2. Instale as Dependências do Projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Certifique-se de ter o Node.js e o npm instalados. Em seguida, execute o seguinte comando na raiz do projeto:
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Execute o Projeto (os comandos devem ser executados em terminais separados)
 
-## Running end-to-end tests
+```bash
+json-server --watch db.json 
+ng serve -o
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+O parâmetro -o abrirá automaticamente o navegador padrão com o aplicativo em execução.
 
-## Further help
+Agora, você pode acessar o sistema em http://localhost:4200/ no seu navegador.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Divirta-se explorando Alumnia!
