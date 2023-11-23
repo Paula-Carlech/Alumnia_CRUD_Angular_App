@@ -12,4 +12,5 @@ export class RodapeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  currentYear: number = new Date().getFullYear();
 }
