@@ -11,8 +11,8 @@ export class AlunoComponent implements OnInit {
 
   @Input() aluno: Aluno = {
     id: 0,
-    conteudo: 'I love Angular',
-    autoria: 'Nay',
+    conteudo: 'teste@email.com',
+    autoria: 'Fulano',
     modelo: 'modelo3'
   }
 
